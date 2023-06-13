@@ -1,11 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import Navbar from './components/Navbar';
-// import HomePage from './components/HomePage';
-// import Team from './components/Team';
-// import AboutPage from './components/AboutPage';
 import 'bootstrap/dist/css/bootstrap.css';
-import { Navbar, HomePage,  Team, AboutPage } from "./components";
+import { Navbar, HomePage, Team, AboutPage } from "./components";
+import employeeData from "./config/employees"; 
 
 const App = () => {
   return (
@@ -14,7 +11,7 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/team" element={<Team />} />
+          <Route path="/team" element={<Team employeeData={employeeData} />} />
           <Route path="/about" element={<AboutPage />} />
         </Routes>
       </div>
@@ -23,4 +20,3 @@ const App = () => {
 };
 
 export default App;
-

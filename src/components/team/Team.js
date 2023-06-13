@@ -1,13 +1,10 @@
-// import React from 'react';
-// import DepartmentDropdown from './DepartmentDropdown';
 import React, { useState } from 'react';
-import { Container, Row, Col, Dropdown } from 'react-bootstrap';
+import { Container, Dropdown } from 'react-bootstrap';
 import './Team.css';
-// import { employees } from '../config/employees';
-import { employees } from '../../config/employees';
+// import { employees } from '../../config/employees';
 import person from "../../assets/images/person.jpg"
 
-const Team = () => {
+const Team = ({ employeeData }) => {
   const [department, setDepartment] = useState('tech');
 
   const handleDepartmentChange = (selectedDepartment) => {
@@ -15,7 +12,7 @@ const Team = () => {
   };
 
   const renderEmployeeList = () => {
-    const departmentEmployees = employees.filter((employee) => employee.department === department);
+    const departmentEmployees = employeeData.filter((employee) => employee.department === department);
 
     return (
       <div className="employee-list">
@@ -48,6 +45,5 @@ const Team = () => {
     </div>
   );
 };
-
 
 export default Team;
