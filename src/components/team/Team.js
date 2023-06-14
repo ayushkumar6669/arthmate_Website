@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { Container, Dropdown } from "react-bootstrap";
+import { Container, Dropdown, Row, Col } from "react-bootstrap";
 import "./Team.css";
-// import { employees } from '../../config/employees';
 import person from "../../assets/images/person.jpg";
 
 const Team = ({ employeeData }) => {
@@ -18,14 +17,18 @@ const Team = ({ employeeData }) => {
 
     return (
       <div className="employee-list">
+      <Row>
         {departmentEmployees.map((employee) => (
-          <div key={employee.id} className="employee-card">
-            <img src={person} alt={employee.name} className="employee-image" />
+          // <Col key={employee.id} xs={12} md={3} className="employee-card">
+          <div className="employee-card">
+            <img src={employee.image} alt={employee.name} className="employee-image" />
             <h3>{employee.name}</h3>
             <p>{employee.designation}</p>
-          </div>
+            </div>
+          // </Col>
         ))}
-      </div>
+      </Row>
+    </div>
     );
   };
 
