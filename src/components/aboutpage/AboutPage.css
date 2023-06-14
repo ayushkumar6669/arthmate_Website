@@ -1,12 +1,63 @@
 .about-page {
-    padding: 3rem 0;
+  padding: 3rem 0;
+}
+
+.about-page h2 {
+  margin-bottom: 2rem;
+}
+
+.about-page p {
+  margin-bottom: 1.5rem;
+}
+
+.about-page {
+  /* Existing styles for the about-page container */
+
+  /* Add background color to the row */
+  .help-support-section,
+  .follow-us-section {
+    padding: 20px;
   }
-  
-  .about-page h2 {
-    margin-bottom: 2rem;
+
+  .bottom_section {
+    background-color: #f7f7f7;
+    margin-top: 40px;
   }
-  
-  .about-page p {
-    margin-bottom: 1.5rem;
+
+  /* Align items horizontally in the row */
+  .help-support-section,
+  .follow-us-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  
+
+  /* Add styles for the contact info in the help & support section */
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .contact-icon {
+    margin-right: 10px;
+  }
+
+  .follow-us-icons {
+    display: flex;
+    align-items: center;
+  }
+
+  .follow-us-icon {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #007bff;
+  }
+}

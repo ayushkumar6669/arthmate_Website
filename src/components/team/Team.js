@@ -1,18 +1,20 @@
-import React, { useState } from 'react';
-import { Container, Dropdown } from 'react-bootstrap';
-import './Team.css';
+import React, { useState } from "react";
+import { Container, Dropdown } from "react-bootstrap";
+import "./Team.css";
 // import { employees } from '../../config/employees';
-import person from "../../assets/images/person.jpg"
+import person from "../../assets/images/person.jpg";
 
 const Team = ({ employeeData }) => {
-  const [department, setDepartment] = useState('tech');
+  const [department, setDepartment] = useState("tech");
 
   const handleDepartmentChange = (selectedDepartment) => {
     setDepartment(selectedDepartment);
   };
 
   const renderEmployeeList = () => {
-    const departmentEmployees = employeeData.filter((employee) => employee.department === department);
+    const departmentEmployees = employeeData.filter(
+      (employee) => employee.department === department
+    );
 
     return (
       <div className="employee-list">
@@ -33,11 +35,15 @@ const Team = ({ employeeData }) => {
         <h2>Team</h2>
         <Dropdown>
           <Dropdown.Toggle variant="primary" id="department-dropdown">
-            {department === 'tech' ? 'Tech' : 'Product'}
+            {department === "tech" ? "Tech" : "Product"}
           </Dropdown.Toggle>
           <Dropdown.Menu>
-            <Dropdown.Item onClick={() => handleDepartmentChange('tech')}>Tech</Dropdown.Item>
-            <Dropdown.Item onClick={() => handleDepartmentChange('product')}>Product</Dropdown.Item>
+            <Dropdown.Item onClick={() => handleDepartmentChange("tech")}>
+              Tech
+            </Dropdown.Item>
+            <Dropdown.Item onClick={() => handleDepartmentChange("product")}>
+              Product
+            </Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
         {renderEmployeeList()}
