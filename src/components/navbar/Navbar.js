@@ -48,6 +48,20 @@ const MainNavbar = () => {
               >
                 <div className="tabhover">What do we do?</div>
               </Nav.Link>
+              <Nav.Link
+                as={Link}
+                to="/user-form"
+                className={location.pathname === "/user-form" ? "active" : ""}
+              >
+                <div className="tabhover">Form (redux example)</div>
+              </Nav.Link>
+              <Nav.Link
+                as={Link}
+                to="/axios-example"
+                className={location.pathname === "/axios-example" ? "active" : ""}
+              >
+                <div className="tabhover">Current IP</div>
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

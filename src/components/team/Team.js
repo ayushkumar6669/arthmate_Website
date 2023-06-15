@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Container, Dropdown, Row, Col } from "react-bootstrap";
 import "./Team.css";
-import person from "../../assets/images/person.jpg";
 
 const Team = ({ employeeData }) => {
   const [department, setDepartment] = useState("tech");
@@ -17,7 +16,7 @@ const Team = ({ employeeData }) => {
 
     return (
       <div className="employee-list">
-      <Row>
+      {/* <Row> */}
         {departmentEmployees.map((employee) => (
           // <Col key={employee.id} xs={12} md={3} className="employee-card">
           <div className="employee-card">
@@ -27,7 +26,7 @@ const Team = ({ employeeData }) => {
             </div>
           // </Col>
         ))}
-      </Row>
+      {/* </Row> */}
     </div>
     );
   };
